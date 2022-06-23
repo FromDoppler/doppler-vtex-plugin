@@ -4,6 +4,14 @@
   "version": "0.0.0",
   "title": "Doppler Email Marketing",
   "description": "",
+  "billingOptions": {
+    "type": "free",
+    "support": {
+      "email": "support@fromdoppler.com",
+      "url": "https://fromdoppler.com"
+    },
+    "availableCountries": ["*"]
+  },
   "scripts": {
     "postreleasy": "vtex publish"
   },
