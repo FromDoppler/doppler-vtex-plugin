@@ -1,5 +1,5 @@
 {
-  "name": "vtex.admin-example",
+  "name": "doppler-email-marketing",
   "version": "0.0.12",
   "devDependencies": {
     "@types/node": "^11.12.1",
@@ -7,11 +7,14 @@
     "@types/react-intl": "^2.3.17",
     "@vtex/tsconfig": "^0.4.4",
     "apollo-client": "^2.4.7",
+    "doppler.doppler-email-marketing": "https://dopplertest--doppler.myvtex.com/_v/private/typings/linked/v1/doppler.doppler-email-marketing@0.0.0+build1654894127/public/@types/doppler.doppler-email-marketing",
     "graphql": "^14.0.2",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-intl": "^2.7.2",
-    "typescript": "3.9.7"
+    "typescript": "3.9.7",
+    "vtex.render-runtime": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.render-runtime@8.132.4/public/@types/vtex.render-runtime",
+    "vtex.styleguide": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.styleguide@9.146.1/public/@types/vtex.styleguide"
   }
 }
