@@ -1,16 +1,31 @@
-import React, { FC } from 'react'
+import React from 'react'
 import { FormattedMessage } from 'react-intl'
-import { Layout, PageHeader } from 'vtex.styleguide'
+import { Layout, PageHeader, PageBlock, Divider } from 'vtex.styleguide'
 
-const DopplerAdmin: FC = () => {
+import { FormSection } from './components/FormSection'
+import { SitetrackingSection } from './components/SitetrackingSection'
+import { ConnectionStepsSection } from './components/ConnectionStepsSection'
+
+const DopplerAdmin = () => {
   return (
     <Layout
-      pageHeader={
-        <PageHeader
-          title={<FormattedMessage id="admin.hello-world" />}
-        />
-      }
+      pageHeader={<PageHeader title={<FormattedMessage id="admin.title" />} />}
     >
+      <PageBlock variation="full">
+        <FormSection />
+
+        <div className="mv6">
+          <Divider orientation="horizontal" />
+        </div>
+
+        <SitetrackingSection />
+
+        <div className="mv6">
+          <Divider orientation="horizontal" />
+        </div>
+
+        <ConnectionStepsSection />
+      </PageBlock>
     </Layout>
   )
 }
