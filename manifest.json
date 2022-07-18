@@ -16,13 +16,31 @@
     "postreleasy": "vtex publish"
   },
   "dependencies": {
-    "vtex.styleguide": "9.x"
+    "vtex.styleguide": "9.x",
+    "vtex.pixel-interfaces": "1.x"
   },
   "builders": {
     "react": "3.x",
     "admin": "0.x",
+    "pixel": "0.x",
     "messages": "1.x",
     "docs": "0.x"
+  },
+  "settingsSchema": {
+    "title": "Doppler Email Marketing",
+    "type": "object",
+    "properties": {
+      "scriptEnabled": {
+        "title": "Site Tacking script",
+        "description": "Description",
+        "type": "boolean"
+      },
+      "form": {
+        "title": "Doppler Form",
+        "description": "Description",
+        "type": "string"
+      }
+    }
   },
   "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
 }

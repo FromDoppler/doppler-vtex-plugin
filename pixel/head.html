@@ -1,0 +1,35 @@
+<script>
+    ;(function() {
+      var scriptEnabled = '{{settings.scriptEnabled}}'
+      if (!scriptEnabled) {
+        console.info(
+          'Doppler Email Marketing tracking script not enabled.'
+        )
+        return
+      }
+      ;(function e() {
+        var e = document.createElement('script')
+        ;(e.type = 'text/javascript'),
+          (e.async = true),
+          (e.src = 'https://hub.fromdoppler.com/public/dhtrack.js')
+        var t = document.getElementsByTagName('script')[0]
+        t.parentNode.insertBefore(e, t)
+      })()
+    })()
+</script>
+
+<script>
+  ;(function() {
+    var form = '{{settings.form}}'
+    if (!form) {
+      console.info(
+        'No Doppler Email Marketing\'s form configured.'
+      )
+      return
+    }
+    
+    ;(function e() {
+      // TODO: handle Doppler Form
+    })()
+  })()
+</script>
