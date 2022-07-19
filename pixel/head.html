@@ -1,6 +1,6 @@
 <script>
     ;(function() {
-      var scriptEnabled = '{{settings.scriptEnabled}}'
+      var scriptEnabled = '{{settings.scriptEnabled}}' === 'true';
       if (!scriptEnabled) {
         console.info(
           'Doppler Email Marketing tracking script not enabled.'
@@ -8,11 +8,12 @@
         return
       }
       ;(function e() {
-        var e = document.createElement('script')
-        ;(e.type = 'text/javascript'),
-          (e.async = true),
-          (e.src = 'https://hub.fromdoppler.com/public/dhtrack.js')
-        var t = document.getElementsByTagName('script')[0]
+        var e = document.createElement('script');
+        e.type = 'text/javascript';
+        e.async = true;
+        e.src = 'https://hub.fromdoppler.com/public/dhtrack.js';
+        
+        var t = document.getElementsByTagName('script')[0];
         t.parentNode.insertBefore(e, t)
       })()
     })()
@@ -20,16 +21,49 @@
 
 <script>
   ;(function() {
-    var form = '{{settings.form}}'
-    if (!form) {
-      console.info(
-        'No Doppler Email Marketing\'s form configured.'
-      )
-      return
-    }
+    var form = decodeURIComponent('{{settings.form}}');
+    var formEnabled = '{{settings.formEnabled}}' === 'true';
     
-    ;(function e() {
-      // TODO: handle Doppler Form
-    })()
+    if (!form || !formEnabled || !isValidFormFormat(form)) {
+      if(!form || !formEnabled) {
+        console.info(
+        'Doppler Email Marketing form not enabled.'
+        )
+      }
+      else {
+        console.info(
+        'Invalid Doppler Email Marketing form configured.'
+        )
+      }
+      return
+    };
+    
+    var formMetaTag = form.match('<meta\\sname="dp-popup"\\scontent="[a-zA-Z0-9%]+')[0];
+    var formHash = formMetaTag.substring(formMetaTag.lastIndexOf("\"")+1, formMetaTag.length);
+
+    var formScriptTag = form.match('<script\\ssrc="https:\/\/cdn.fromdoppler.com\/formgenerator\/latest\/vendor.js\\?[0-9]+')[0];
+    var formId = formScriptTag.substring(formScriptTag.lastIndexOf("?")+1, formScriptTag.length);
+    
+    var meta = document.createElement('meta');
+    meta.name = 'dp-popup';
+    meta.content = formHash;
+
+    var script = document.createElement('script');
+    script.type = 'text/javascript';
+    script.src = 'https://cdn.fromdoppler.com/formgenerator/latest/vendor.js?' + formId;
+
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = 'https://cdn.fromdoppler.com/formgenerator/latest/styles.css?' + formId;
+    
+    var t = document.getElementsByTagName('script')[0];
+    t.parentNode.insertBefore(meta, t);
+    t.parentNode.insertBefore(script, t);
+    t.parentNode.insertBefore(link, t);
+
+    function isValidFormFormat (form){
+      var regex = new RegExp('^(<!--\\sinsert\\sthis\\sin\\shead\\s-->\\s)?(<meta\\sname="dp-popup"\\scontent="[a-zA-Z0-9%]+">){1}\\s(<script\\ssrc="https:\/\/cdn.fromdoppler.com\/formgenerator\/latest\/vendor.js\\?[0-9]+"><\/script>){1}\\s(<link\\srel="stylesheet"\\shref="https:\/\/cdn.fromdoppler.com\/formgenerator\/latest\/styles.css\\?[0-9]+"\\s\/>){1}$');
+      return regex.test(form);
+    }
   })()
 </script>

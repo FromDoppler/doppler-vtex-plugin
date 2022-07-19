@@ -30,15 +30,19 @@
     "title": "Doppler Email Marketing",
     "type": "object",
     "properties": {
-      "scriptEnabled": {
-        "title": "Site Tacking script",
-        "description": "Description",
-        "type": "boolean"
-      },
       "form": {
         "title": "Doppler Form",
         "description": "Description",
         "type": "string"
+      },
+      "formEnabled": {
+        "title": "Enable Form",
+        "type": "boolean"
+      },
+      "scriptEnabled": {
+        "title": "Site Tacking script",
+        "description": "Description",
+        "type": "boolean"
       }
     }
   },
