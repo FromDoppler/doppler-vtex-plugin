@@ -1,6 +1,0 @@
-{
-  "admin.app.doppler": {
-    "component": "DopplerAdmin",
-    "path": "/admin/app/doppler-email-marketing"
-  }
-}
