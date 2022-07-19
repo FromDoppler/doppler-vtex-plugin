@@ -10,7 +10,9 @@
       "email": "support@fromdoppler.com",
       "url": "https://fromdoppler.com"
     },
-    "availableCountries": ["*"]
+    "availableCountries": [
+      "*"
+    ]
   },
   "scripts": {
     "postreleasy": "vtex publish"
@@ -31,8 +33,8 @@
     "type": "object",
     "properties": {
       "form": {
-        "title": "Doppler Form",
-        "description": "Description",
+        "title": "Subscription form",
+        "description": "Integrate your forms very easily: Log in to Doppler and go to Lists > Forms > Create Form. Choose the Pop-up format, design it and publish it. Click on “Copy code”, paste it below, select “Enable Form” and click on “Save”.",
         "type": "string"
       },
       "formEnabled": {
@@ -40,8 +42,8 @@
         "type": "boolean"
       },
       "scriptEnabled": {
-        "title": "Site Tacking script",
-        "description": "Description",
+        "title": "Enable On-Site Tracking",
+        "description": "Use the Tracking on-site to understand your visitors' behavior while navigating your website and know the navigation and program personalized emails based on that.",
         "type": "boolean"
       }
     }
