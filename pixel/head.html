@@ -23,26 +23,31 @@
   ;(function() {
     var form = decodeURIComponent('{{settings.form}}');
     var formEnabled = '{{settings.formEnabled}}' === 'true';
-    
-    if (!form || !formEnabled || !isValidFormFormat(form)) {
-      if(!form || !formEnabled) {
-        console.info(
+    if (!form || !formEnabled) {
+      console.info(
         'Doppler Email Marketing form not enabled.'
         )
-      }
-      else {
-        console.info(
-        'Invalid Doppler Email Marketing form configured.'
-        )
-      }
       return
     };
     
-    var formMetaTag = form.match('<meta\\sname="dp-popup"\\scontent="[a-zA-Z0-9%]+')[0];
-    var formHash = formMetaTag.substring(formMetaTag.lastIndexOf("\"")+1, formMetaTag.length);
+    var formMetaTag = form.match('<meta\\sname="dp-popup"\\scontent="[a-zA-Z0-9%]+');
+    if(!formMetaTag){
+      console.info(
+        'Invalid Doppler Email Marketing form configured.'
+        )
+        return
+    }
 
-    var formScriptTag = form.match('<script\\ssrc="https:\/\/cdn.fromdoppler.com\/formgenerator\/latest\/vendor.js\\?[0-9]+')[0];
-    var formId = formScriptTag.substring(formScriptTag.lastIndexOf("?")+1, formScriptTag.length);
+    var formScriptTag = form.match('<script\\ssrc="https:\/\/cdn.fromdoppler.com\/formgenerator\/latest\/vendor.js\\?[0-9]+');
+    if(!formScriptTag){
+      console.info(
+        'Invalid Doppler Email Marketing form configured.'
+        )
+        return
+    }
+
+    var formHash = formMetaTag[0].substring(formMetaTag[0].lastIndexOf("\"")+1, formMetaTag[0].length);
+    var formId = formScriptTag[0].substring(formScriptTag[0].lastIndexOf("?")+1, formScriptTag[0].length);
     
     var meta = document.createElement('meta');
     meta.name = 'dp-popup';
@@ -60,10 +65,5 @@
     t.parentNode.insertBefore(meta, t);
     t.parentNode.insertBefore(script, t);
     t.parentNode.insertBefore(link, t);
-
-    function isValidFormFormat (form){
-      var regex = new RegExp('^(<!--\\sinsert\\sthis\\sin\\shead\\s-->\\s)?(<meta\\sname="dp-popup"\\scontent="[a-zA-Z0-9%]+">){1}\\s(<script\\ssrc="https:\/\/cdn.fromdoppler.com\/formgenerator\/latest\/vendor.js\\?[0-9]+"><\/script>){1}\\s(<link\\srel="stylesheet"\\shref="https:\/\/cdn.fromdoppler.com\/formgenerator\/latest\/styles.css\\?[0-9]+"\\s\/>){1}$');
-      return regex.test(form);
-    }
   })()
 </script>
