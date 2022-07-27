@@ -1,11 +1,24 @@
 {
-  "name": "",
-  "headline": "",
-  "overview": "",
-  "features": [],
-  "additionalInformation": "",
-  "websiteURL": "https://vtex.com/",
+  "name": "Doppler Email, Automação & Marketing de Dados",
+  "headline": "Integração através de API e Javascript com Doppler para capturar dados e automatizar e-mails e SMS de acordo com o comportamento dos seus clientes.",
+  "overview": "Doppler é uma plataforma líder de Email, Automação & Marketing de Dados no mercado de língua espanhola.\\n\\n Através da sua aplicação pode criar e enviar Campanhas por Email de uma forma muito simples, segura e eficaz.\\n\\n Pode também configurar mensagens automáticas, integrar com outras aplicações, enviar SMS e obter relatórios de resultados e optimizar para melhorar as vendas da sua marca, entre outras acções.",
+  "features": [
+    "Eventos em APP: este plugin permite rastrear vários eventos em sua loja VTEX.",
+    "Automação Visualizada do Produto: envie e-mails com base nos produtos que seus contatos visualizaram.",
+    "Automação do carrinho abandonado: envia e-mails ou SMS para contatos que abandonaram seu carrinho de compras.",
+    "Automação de URLs visitadas: enviar e-mails ou SMS para contatos que visitaram uma página específica (categorias, contato, página de oferta promocional).",
+    "Capture novos Leads: adicione contatos de formulários em sua Loja Direta a suas listas no Doppler.",
+    "Drag and Drop Editor: Desenhe facilmente campanhas de e-mail e envie-as para segmentos de seus clientes e contatos.",
+    "Teste A/B: teste seu conteúdo e suas linhas de assunto em seus e-mails para melhorar a conversão.",
+    "Sincronização do catálogo: ao integrar sua loja, você poderá importar automaticamente seus produtos disponíveis em suas campanhas.",
+    "Automação de assinaturas de listas: envie e-mails de boas-vindas ou SMS para contatos que acabaram de se inscrever em suas listas.",
+    "Filtragem de contatos inválidos: proteja suas listas de contatos, evitando e-mails inválidos e melhorando sua capacidade de entrega.",
+    "Janela pop-up: convide seus visitantes a assinar sua newsletter através de uma janela pop-up.",
+    "Qualifique seus contatos: segmentar seus contatos de acordo com o nível de interação com suas campanhas de e-mail.",
+    "Integração do Native Big Query: Conecte-se com suas ferramentas de BI para construir relatórios avançados."
+  ],
+  "websiteURL": "https://partners.fromdoppler.com/beneficios-vtex/",
   "support": {
-    "url": "https://support.vtex.com/hc/requests"
+    "url": "https://help.fromdoppler.com/en"
   }
 }

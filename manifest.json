@@ -29,7 +29,7 @@
     "type": "object",
     "properties": {
       "form": {
-        "title": "Subscription form",
+        "title": "Subscription form and On-Site Tracking",
         "description": "Integrate your forms very easily: Log in to Doppler and go to Lists > Forms > Create Form. Choose the Pop-up format, design it and publish it. Click on “Copy code”, paste it below, select “Enable Form” and click on “Save”.",
         "type": "string"
       },
@@ -38,8 +38,8 @@
         "type": "boolean"
       },
       "scriptEnabled": {
-        "title": "Enable On-Site Tracking",
-        "description": "Use the Tracking on-site to understand your visitors' behavior while navigating your website and know the navigation and program personalized emails based on that.",
+        "title": "Activate On-Site Tracking in the VTEX store",
+        "description": "To activate On-Site Tracking in your VTEX account, follow these steps: Log in to Doppler and go to Control Panel > On-Site Tracking & Push Notifications, click on “Enable On-Site Tracking”, configure and verify your domain. Then, click on this page on “Activate On-Site Tracking in store”.",
         "type": "boolean"
       }
     }
