@@ -1,11 +1,24 @@
 {
-  "name": "",
-  "headline": "",
-  "overview": "",
-  "features": [],
-  "additionalInformation": "",
-  "websiteURL": "https://vtex.com/",
+  "name": "Doppler Email, Automation & Data Marketing",
+  "headline": "Integration via API and Javascript with Doppler to capture data and automate emails and SMS according to the behavior of your customers.",
+  "overview": "Doppler is a leading Email, Automation & Data Marketing platform in the Spanish-speaking market.\\n\\n Through its app you will be able to create and send Email Campaigns in a very simple, safe and effective way.\\n\\n You can also configure automated messages, integrate with other applications, send SMS and get results reports and optimize to improve the sales of your brand, among other actions.",
+  "features": [
+    "Events in APP: this plugin allows you to track multiple events in your VTEX Store.",
+    "Product Visited Automation: send emails based on the products viewed by your contacts.",
+    "Abandoned Cart Automation: sends emails or SMS to contacts who abandoned their shopping cart.",
+    "Visited URL Automation: send emails or SMS to contacts who visited a specific page (categories, contact, promotional offer page).",
+    "Capture new Leads: add contacts from forms in your Direct Store to your lists in Doppler.",
+    "Drag and Drop Editor: Easily design email campaigns and send them to segments of your customers and contacts.",
+    "A/B Testing: test your content and subject lines in your emails to improve conversion.",
+    "Catalog Synchronization: by integrating your store you will be able to automatically import your available products to your campaigns.",
+    "List Subscription Automation: send welcome emails or SMS to contacts who have just subscribed to your lists.",
+    "Invalid contact filtering: protect your contact lists by avoiding invalid emails and improving your deliverability.",
+    "Pop-up window: invite your visitors to subscribe to your newsletter through a pop-up.",
+    "Contacts scoring: segment your contacts according to the level of interaction with your Email Campaigns.",
+    "Native integration with Big Query: Connect with your BI tools to build advanced reports."
+  ],
+  "websiteURL": "https://partners.fromdoppler.com/beneficios-vtex/",
   "support": {
-    "url": "https://support.vtex.com/hc/requests"
+    "url": "https://help.fromdoppler.com/en"
   }
 }
