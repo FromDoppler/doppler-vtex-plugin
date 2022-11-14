@@ -10,9 +10,7 @@
       "email": "support@fromdoppler.com",
       "url": "https://fromdoppler.com"
     },
-    "availableCountries": [
-      "*"
-    ]
+    "availableCountries": ["*"]
   },
   "scripts": {
     "postreleasy": "vtex publish"
