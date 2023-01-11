@@ -1,7 +1,7 @@
 {
   "name": "doppler-email-marketing",
   "vendor": "doppler",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "title": "Doppler Email Marketing",
   "description": "",
   "billingOptions": {
@@ -10,7 +10,9 @@
       "email": "support@fromdoppler.com",
       "url": "https://fromdoppler.com"
     },
-    "availableCountries": ["*"]
+    "availableCountries": [
+      "*"
+    ]
   },
   "scripts": {
     "postreleasy": "vtex publish"
