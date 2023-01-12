@@ -1,7 +1,7 @@
 {
   "name": "Doppler Email, Automation & Data Marketing",
   "headline": "Integration via API and Javascript with Doppler to capture data and automate emails and SMS according to the behavior of your customers.",
-  "overview": "Doppler is a leading Email, Automation & Data Marketing platform in the Spanish-speaking market. \\n\\n Through its app you will be able to create and send Email Campaigns in a very simple, safe and effective way. \\n\\n You can also configure automated messages, integrate with other applications, send SMS and get results reports and optimize to improve the sales of your brand, among other actions.",
+  "overview": "Doppler is a leading Email, Automation & Data Marketing platform in the Spanish-speaking market. \\n Through its app you will be able to create and send Email Campaigns in a very simple, safe and effective way. \\n\\n You can also configure automated messages, integrate with other applications, send SMS and get results reports and optimize to improve the sales of your brand, among other actions.",
   "features": [
     "Events in APP: this plugin allows you to track multiple events in your VTEX Store.",
     "Product Visited Automation: send emails based on the products viewed by your contacts.",
